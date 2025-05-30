@@ -1,0 +1,216 @@
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+
+body, html {
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  background-color: #000;
+  background-image: url('backgroundWEB.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 200px; /* optional: adds scroll space */
+}
+
+.container {
+  background-color: #6ab901;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 40%;
+  max-width: 340px;
+  min-height: 700px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.top-bar {
+  display: flex;
+  font-family: ARIAL;
+  justify-content: space-between;
+  font-size: 01rem;
+  margin-bottom: 0rem;
+}
+
+.top-bar a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.center-box {
+    
+  text-align: center;
+}
+
+.center-box h1 {
+    color: black;
+    margin-top: .2rem;
+  font-size: 3.8rem;
+  font-style: oblique;
+  font-weight: 650;
+  line-height: 1.1;
+  margin: 0rem;
+  text-align: center;
+
+}
+
+.tagline {
+    font-family: ARIAL;
+  font-size: 1 rem;
+  margin-bottom: 1.0rem;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.7rem 0;
+  border-top: 3px solid black;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-links a:last-child {
+  border-bottom: 3px solid black;
+}
+
+.nav-links a em {
+  font-style: italic;
+}
+
+.bottom-left-image {
+  position: absolute;
+  bottom: 0px;
+  left: 190px; /* Same left value as top-left image to center align */
+  z-index: 1;
+}
+
+.bottom-left-image img {
+  width: 360px;
+  height: auto;
+
+  border-radius: 8px;
+}
+
+.middle-left-image {
+  position: absolute;
+  top: 375px; /* Adjust depending on layout */
+  left: 190px;
+  z-index: 1;
+}
+
+.middle-left-image img {
+  width: 360px;
+  height:auto;
+  border-radius: 8px;
+}
+
+.top-right-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 1050px;
+  height: auto;
+  z-index: 10;
+}
+
+.gif-row {
+  position: absolute;
+  top: 790px; /* adjust to move it below the top-right image */
+  right: 100px;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.gif-row img {
+  width: 200px;
+  height: auto;
+}
+
+.top-right-title {
+  position: absolute;
+  top: 10px;
+  right: 320px;
+  font-family: Futura, "Trebuchet MS", sans-serif;
+  font-size: 3rem;
+  color: #f85414;
+  text-shadow: 0 0 5px #020202, 0 0 15px #0b0b0b, 0 0 20px #ff4500;
+  animation: blinkTitle 1.5s infinite;
+  z-index: 999;
+}
+
+@keyframes blinkTitle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  body, html {
+    background-size: contain;
+    background-position: top;
+  }
+
+  .background {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: none;
+    margin-top: 20px;
+    min-height: auto;
+  }
+
+  .top-left-image,
+  .middle-left-image,
+  .bottom-left-image,
+  .top-right-image,
+  .gif-row,
+  .top-right-title {
+    position: static;
+    width: 90%;
+    max-width: 360px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .top-left-image img,
+  .middle-left-image img,
+  .bottom-left-image img,
+  .top-right-image,
+  .gif-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gif-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-right-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
